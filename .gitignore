@@ -9,3 +9,5 @@ Thumbs.db
 *.log
 source-materials/*
 !source-materials/README.md
+# 神社影片已改用 YouTube，原始 MP4 僅保留於本機。
+/public/assets/projects/scene-design/shrine-tour.mp4
