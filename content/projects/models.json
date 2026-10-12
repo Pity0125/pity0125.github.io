@@ -1,0 +1,14 @@
+[
+  {"name":"Lamp","file":"Lamp.png","short":"oTvwS","id":"d8672fe18dab4f2bb6eed394cae17674"},
+  {"name":"Coin Bag","file":"Coin_Bag.png","short":"oTCYP","id":"d371f23feed24e84a19c33c331ba8e47"},
+  {"name":"Light","file":"Light.png","short":"oTCZr","id":"2f204e5ee28f485d9961df3d50c58616"},
+  {"name":"Sign","file":"Sign.png","short":"pONFK","id":"cb77bdd0546e46ffa25800f2ae884062"},
+  {"name":"Hat","file":"Hat.png","short":"oTIKJ","id":"044bc84b560149b7a0d32328b6da03ea"},
+  {"name":"Vintage Vase","file":"VintageVase.png","short":"oTKMw","id":"c9696f8ba90042c2beb397c0617de874"},
+  {"name":"Plastic Bucket","file":"Plastic_bucket.png","short":"oTPpF","id":"d329b6988a334532a63c64b24627ab9f"},
+  {"name":"Box","file":"Box.png","short":"pONFP","id":"3743a29134534e89bd78b8c8fc1ad618"},
+  {"name":"Curtain","file":"Curtain.png","short":"oTwBU","id":"8c33bba9f30e472381abad58478f7fb0"},
+  {"name":"Bed","file":"Bed.png"},
+  {"name":"Refrigerator","file":"Refrigerator.png"},
+  {"name":"Traffic Ton","file":"Traffic_Ton.png"}
+]

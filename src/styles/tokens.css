@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Naikai Font";
+  src: url("../../public/assets/fonts/naikai/NaikaiFont-Regular-Lite.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+/* 主題字體與共用設計變數。 */
+:root {
+  color-scheme: light;
+  --color-bg: #f0e8da;
+  --color-text: #39434c;
+  --color-muted: #585e59;
+  --color-line: #d2c6b4;
+  --color-accent: #46606e;
+  --color-surface: #e7ddcc;
+  --font-body: "Naikai Font", "Microsoft JhengHei", sans-serif;
+  --font-display: "Klee One", "Naikai Font", "Yu Gothic", sans-serif;
+  --page-width: 1680px;
+  --gutter-left: 24px;
+  --gutter-right: 24px;
+  --motion-fast: 180ms;
+  --motion-enter: 650ms;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #171e2b;
+  --color-text: #edf0f7;
+  --color-muted: #b4bfd1;
+  --color-line: #39465a;
+  --color-accent: #b8cbea;
+  --color-surface: #242f41;
+}
+
+
+
+/* 無腳本或尚未套用手動偏好時，使用系統配色。 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --color-bg: #171e2b;
+    --color-text: #edf0f7;
+    --color-muted: #b4bfd1;
+    --color-line: #39465a;
+    --color-accent: #b8cbea;
+    --color-surface: #242f41;
+  }
+}
+

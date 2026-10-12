@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="個人作品集網站，正在整理作品與設計方向。" />
+    <title>ゆうの余白｜個人作品集</title>
+    <script src="./src/scripts/theme.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&amp;display=swap" />
+    <link rel="stylesheet" href="./src/styles/tokens.css" />
+    <link rel="stylesheet" href="./src/styles/base.css" />
+    <link rel="stylesheet" href="./src/styles/motion.css" />
+    <link rel="stylesheet" href="./src/styles/gallery.css" />
+    <link rel="stylesheet" href="./src/styles/models.css" />
+    <link rel="stylesheet" href="./src/styles/scene.css" />
+    <link rel="stylesheet" href="./src/styles/categories.css" />
+    <link rel="stylesheet" href="./src/styles/night-sky.css" />
+    <link rel="stylesheet" href="./src/styles/daylight.css" />
+    <script src="./src/scripts/motion.js" defer></script>
+    <script src="./src/scripts/main.js" defer></script>
+    <script src="./src/scripts/gallery.js" defer></script>
+    <script src="./src/scripts/models.js" defer></script>
+    <script src="./src/scripts/scene.js" defer></script>
+    <script src="./src/scripts/categories.js" defer></script>
+    <script src="./src/scripts/night-sky.js" defer></script>
+    <script src="./src/scripts/daylight.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要內容</a>
+    <header class="site-header">
+      <a class="brand" href="#home" lang="ja">ゆうの余白</a>
+      <nav aria-label="主要導覽">
+        <a href="#work">作品</a>
+        <a href="#about">關於我</a>
+        <a href="#contact">聯絡</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="深色模式" aria-pressed="false" hidden>
+        <span data-theme-icon aria-hidden="true">☾</span>
+        <span data-theme-label>夜色</span>
+      </button>
+    </header>
+    <main id="main">
+      <section id="home" class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">PORTFOLIO / 準備中</p>
+        <h1 id="hero-title" class="site-title" lang="ja">ゆうの余白</h1>
+        <p>這是作品集的起點。接下來，讓作品、故事與互動一起構成屬於我的網站。</p>
+      </section>
+      <section class="categories" aria-labelledby="category-title">
+        <div class="category-heading">
+          <h2 id="category-title">作品分類</h2>
+          <button class="category-reset" type="button" data-filter="all" aria-pressed="true" aria-controls="work">全部作品</button>
+        </div>
+        <div class="category-list" role="group" aria-label="依作品類型篩選">
+          <button class="category-tag" type="button" data-filter="layout" aria-pressed="false" aria-controls="work" style="--order:0"><span class="category-paper"><span class="category-number" aria-hidden="true">01</span><span class="category-name">編排</span></span></button>
+          <button class="category-tag" type="button" data-filter="app" aria-pressed="false" aria-controls="work" style="--order:1"><span class="category-paper"><span class="category-number" aria-hidden="true">02</span><span class="category-name category-latin">App</span></span></button>
+          <button class="category-tag" type="button" data-filter="photography" aria-pressed="false" aria-controls="work" style="--order:2"><span class="category-paper"><span class="category-number" aria-hidden="true">03</span><span class="category-name">攝影</span></span></button>
+          <button class="category-tag" type="button" data-filter="game" aria-pressed="false" aria-controls="work" style="--order:3"><span class="category-paper"><span class="category-number" aria-hidden="true">04</span><span class="category-name">遊戲</span></span></button>
+          <button class="category-tag" type="button" data-filter="model" aria-pressed="false" aria-controls="work" style="--order:4"><span class="category-paper"><span class="category-number" aria-hidden="true">05</span><span class="category-name">模型</span></span></button>
+          <button class="category-tag" type="button" data-filter="scene" aria-pressed="false" aria-controls="work" style="--order:5"><span class="category-paper"><span class="category-number" aria-hidden="true">06</span><span class="category-name"><span class="category-3d">3D</span>場景</span></span></button>
+          <button class="category-tag" type="button" data-filter="film" aria-pressed="false" aria-controls="work" style="--order:6"><span class="category-paper"><span class="category-number" aria-hidden="true">07</span><span class="category-name">影片</span></span></button>
+        </div>
+      </section>
+      <section id="work" class="content-section" aria-labelledby="work-title">
+        <p class="eyebrow">01 / SELECTED WORK</p>
+        <h2 id="work-title">精選作品</h2>
+        <p class="filter-status" role="status" aria-live="polite" aria-atomic="true" hidden></p>
+        <article class="project-gallery" data-category="layout" aria-labelledby="pccs-title" tabindex="0">
+          <div class="project-heading">
+            <div>
+              <p class="eyebrow">視覺編排 / 01</p>
+              <h3 id="pccs-title">日本色研 PCCS 排版</h3>
+            </div>
+            <span class="project-tag">色彩・編排</span>
+          </div>
+          <p class="gallery-intro">十張畫面，收藏色彩的不同表情。</p>
+          <div class="gallery-carousel" aria-label="PCCS 圖片輪播" aria-roledescription="輪播">
+            <button class="gallery-card" data-position="0" type="button" aria-label="放大檢視 PCCS 排版第 1 張">
+              <img src="./public/assets/projects/pccs-layout/page-01.png" width="1754" height="1240" alt="日本色研 PCCS 排版，第 1 張" />
+            </button>
+          </div>
+          <p class="gallery-status" role="status" aria-live="polite" aria-atomic="true">01 / 10</p>
+          <p class="gallery-hint">點選兩側圖片翻頁，點選中央圖片放大欣賞。</p>
+          <noscript><p>啟用 JavaScript 後可切換圖片與放大檢視。</p></noscript>
+        </article>
+        <!-- MODEL CARDS START -->
+<div class="model-grid"><article class="model-card" data-category="model" aria-labelledby="model-title-0">
+            <button class="model-image-button" type="button" data-model-image="./public/assets/projects/model-collection/Lamp.png" data-model-name="Lamp" aria-label="放大檢視 Lamp"><img src="./public/assets/projects/model-collection/Lamp-thumb.jpg" alt="Lamp 模型作品" loading="lazy" width="960" height="540" /></button>
+            <div class="model-card-info"><p class="eyebrow">3D OBJECT / 01</p><h3 id="model-title-0">Lamp</h3>
+            <button type="button" class="gallery-button" data-model-id="d8672fe18dab4f2bb6eed394cae17674" data-model-name="Lamp" data-model-link="https://skfb.ly/oTvwS">探索 3D ↗</button></div>
+          </article>
+<article class="model-card" data-category="model" aria-labelledby="model-title-1">
+            <button class="model-image-button" type="button" data-model-image="./public/assets/projects/model-collection/Coin_Bag.png" data-model-name="Coin Bag" aria-label="放大檢視 Coin Bag"><img src="./public/assets/projects/model-collection/Coin_Bag-thumb.jpg" alt="Coin Bag 模型作品" loading="lazy" width="960" height="540" /></button>
+            <div class="model-card-info"><p class="eyebrow">3D OBJECT / 02</p><h3 id="model-title-1">Coin Bag</h3>
+            <button type="button" class="gallery-button" data-model-id="d371f23feed24e84a19c33c331ba8e47" data-model-name="Coin Bag" data-model-link="https://skfb.ly/oTCYP">探索 3D ↗</button></div>
+          </article>
+<article class="model-card" data-category="model" aria-labelledby="model-title-2">
+            <button class="model-image-button" type="button" data-model-image="./public/assets/projects/model-collection/Light.png" data-model-name="Light" aria-label="放大檢視 Light"><img src="./public/assets/projects/model-collection/Light-thumb.jpg" alt="Light 模型作品" loading="lazy" width="960" height="540" /></button>
+            <div class="model-card-info"><p class="eyebrow">3D OBJECT / 03</p><h3 id="model-title-2">Light</h3>
+            <button type="button" class="gallery-button" data-model-id="2f204e5ee28f485d9961df3d50c58616" data-model-name="Light" data-model-link="https://skfb.ly/oTCZr">探索 3D ↗</button></div>
+          </article>
+<article class="model-card" data-category="model" aria-labelledby="model-title-3">
+            <button class="model-image-button" type="button" data-model-image="./public/assets/projects/model-collection/Sign.png" data-model-name="Sign" aria-label="放大檢視 Sign"><img src="./public/assets/projects/model-collection/Sign-thumb.jpg" alt="Sign 模型作品" loading="lazy" width="960" height="540" /></button>
+            <div class="model-card-info"><p class="eyebrow">3D OBJECT / 04</p><h3 id="model-title-3">Sign</h3>
+            <button type="button" class="gallery-button" data-model-id="cb77bdd0546e46ffa25800f2ae884062" data-model-name="Sign" data-model-link="https://skfb.ly/pONFK">探索 3D ↗</button></div>
+          </article>
+<article class="model-card" data-category="model" aria-labelledby="model-title-4">
+            <button class="model-image-button" type="button" data-model-image="./public/assets/projects/model-collection/Hat.png" data-model-name="Hat" aria-label="放大檢視 Hat"><img src="./public/assets/projects/model-collection/Hat-thumb.jpg" alt="Hat 模型作品" loading="lazy" width="960" height="540" /></button>
+            <div class="model-card-info"><p class="eyebrow">3D OBJECT / 05</p><h3 id="model-title-4">Hat</h3>
+            <button type="button" class="gallery-button" data-model-id="044bc84b560149b7a0d32328b6da03ea" data-model-name="Hat" data-model-link="https://skfb.ly/oTIKJ">探索 3D ↗</button></div>
+          </article>
+<article class="model-card" data-category="model" aria-labelledby="model-title-5">
+            <button class="model-image-button" type="button" data-model-image="./public/assets/projects/model-collection/VintageVase.png" data-model-name="Vintage Vase" aria-label="放大檢視 Vintage Vase"><img src="./public/assets/projects/model-collection/VintageVase-thumb.jpg" alt="Vintage Vase 模型作品" loading="lazy" width="960" height="540" /></button>
+            <div class="model-card-info"><p class="eyebrow">3D OBJECT / 06</p><h3 id="model-title-5">Vintage Vase</h3>
+            <button type="button" class="gallery-button" data-model-id="c9696f8ba90042c2beb397c0617de874" data-model-name="Vintage Vase" data-model-link="https://skfb.ly/oTKMw">探索 3D ↗</button></div>
+          </article>
+<article class="model-card" data-category="model" aria-labelledby="model-title-6">
+            <button class="model-image-button" type="button" data-model-image="./public/assets/projects/model-collection/Plastic_bucket.png" data-model-name="Plastic Bucket" aria-label="放大檢視 Plastic Bucket"><img src="./public/assets/projects/model-collection/Plastic_bucket-thumb.jpg" alt="Plastic Bucket 模型作品" loading="lazy" width="960" height="540" /></button>
+            <div class="model-card-info"><p class="eyebrow">3D OBJECT / 07</p><h3 id="model-title-6">Plastic Bucket</h3>
+            <button type="button" class="gallery-button" data-model-id="d329b6988a334532a63c64b24627ab9f" data-model-name="Plastic Bucket" data-model-link="https://skfb.ly/oTPpF">探索 3D ↗</button></div>
+          </article>
+<article class="model-card" data-category="model" aria-labelledby="model-title-7">
+            <button class="model-image-button" type="button" data-model-image="./public/assets/projects/model-collection/Box.png" data-model-name="Box" aria-label="放大檢視 Box"><img src="./public/assets/projects/model-collection/Box-thumb.jpg" alt="Box 模型作品" loading="lazy" width="960" height="540" /></button>
+            <div class="model-card-info"><p class="eyebrow">3D OBJECT / 08</p><h3 id="model-title-7">Box</h3>
+            <button type="button" class="gallery-button" data-model-id="3743a29134534e89bd78b8c8fc1ad618" data-model-name="Box" data-model-link="https://skfb.ly/pONFP">探索 3D ↗</button></div>
+          </article>
+<article class="model-card" data-category="model" aria-labelledby="model-title-8">
+            <button class="model-image-button" type="button" data-model-image="./public/assets/projects/model-collection/Curtain.png" data-model-name="Curtain" aria-label="放大檢視 Curtain"><img src="./public/assets/projects/model-collection/Curtain-thumb.jpg" alt="Curtain 模型作品" loading="lazy" width="960" height="540" /></button>
+            <div class="model-card-info"><p class="eyebrow">3D OBJECT / 09</p><h3 id="model-title-8">Curtain</h3>
+            <button type="button" class="gallery-button" data-model-id="8c33bba9f30e472381abad58478f7fb0" data-model-name="Curtain" data-model-link="https://skfb.ly/oTwBU">探索 3D ↗</button></div>
+          </article>
+<article class="model-card" data-category="model" aria-labelledby="model-title-9">
+            <button class="model-image-button" type="button" data-model-image="./public/assets/projects/model-collection/Bed.png" data-model-name="Bed" aria-label="放大檢視 Bed"><img src="./public/assets/projects/model-collection/Bed-thumb.jpg" alt="Bed 模型作品" loading="lazy" width="960" height="540" /></button>
+            <div class="model-card-info"><p class="eyebrow">3D OBJECT / 10</p><h3 id="model-title-9">Bed</h3>
+            <span class="model-still-label">圖片展示 · 點圖放大</span></div>
+          </article>
+<article class="model-card" data-category="model" aria-labelledby="model-title-10">
+            <button class="model-image-button" type="button" data-model-image="./public/assets/projects/model-collection/Refrigerator.png" data-model-name="Refrigerator" aria-label="放大檢視 Refrigerator"><img src="./public/assets/projects/model-collection/Refrigerator-thumb.jpg" alt="Refrigerator 模型作品" loading="lazy" width="960" height="540" /></button>
+            <div class="model-card-info"><p class="eyebrow">3D OBJECT / 11</p><h3 id="model-title-10">Refrigerator</h3>
+            <span class="model-still-label">圖片展示 · 點圖放大</span></div>
+          </article>
+<article class="model-card" data-category="model" aria-labelledby="model-title-11">
+            <button class="model-image-button" type="button" data-model-image="./public/assets/projects/model-collection/Traffic_Ton.png" data-model-name="Traffic Ton" aria-label="放大檢視 Traffic Ton"><img src="./public/assets/projects/model-collection/Traffic_Ton-thumb.jpg" alt="Traffic Ton 模型作品" loading="lazy" width="960" height="540" /></button>
+            <div class="model-card-info"><p class="eyebrow">3D OBJECT / 12</p><h3 id="model-title-11">Traffic Ton</h3>
+            <span class="model-still-label">圖片展示 · 點圖放大</span></div>
+          </article></div>
+<!-- MODEL CARDS END -->
+        <article class="scene-project" data-category="scene" aria-labelledby="scene-title">
+          <div class="project-heading">
+            <div><p class="eyebrow">3D SCENE / 空間與光影</p><h3 id="scene-title">神社</h3></div>
+            <span class="project-tag">3D 場景布置</span>
+          </div>
+          <p class="gallery-intro">穿過鳥居，沿著石階走進林間。</p>
+          <div class="scene-switcher" role="group" aria-label="切換神社場景畫面">
+            <button class="gallery-button" type="button" data-scene-target="scene-film" aria-pressed="true" aria-controls="scene-film">▷ 場景導覽</button>
+            <button class="gallery-button" type="button" data-scene-target="scene-photo-1" aria-pressed="false" aria-controls="scene-photo-1">景色 01</button>
+            <button class="gallery-button" type="button" data-scene-target="scene-photo-2" aria-pressed="false" aria-controls="scene-photo-2">景色 02</button>
+            <button class="gallery-button" type="button" data-scene-target="scene-photo-3" aria-pressed="false" aria-controls="scene-photo-3">景色 03</button>
+          </div>
+          <div class="scene-stage">
+            <div id="scene-photo-1" class="scene-panel" hidden>
+              <button class="scene-photo" type="button" data-model-image="./public/assets/projects/scene-design/shrine-01.png" data-model-name="神社 · 景色 01" data-preview-kind="場景" aria-label="放大檢視神社景色 01"><img src="./public/assets/projects/scene-design/shrine-01.png" alt="神社場景：林間鳥居與石階" loading="lazy" /></button>
+            </div>
+            <div id="scene-photo-2" class="scene-panel" hidden>
+              <button class="scene-photo" type="button" data-model-image="./public/assets/projects/scene-design/shrine-02.png" data-model-name="神社 · 景色 02" data-preview-kind="場景" aria-label="放大檢視神社景色 02"><img src="./public/assets/projects/scene-design/shrine-02.png" alt="神社場景，第二個視角" loading="lazy" /></button>
+            </div>
+            <div id="scene-photo-3" class="scene-panel" hidden>
+              <button class="scene-photo" type="button" data-model-image="./public/assets/projects/scene-design/shrine-03.png" data-model-name="神社 · 景色 03" data-preview-kind="場景" aria-label="放大檢視神社景色 03"><img src="./public/assets/projects/scene-design/shrine-03.png" alt="神社場景，第三個視角" loading="lazy" /></button>
+            </div>
+            <div id="scene-film" class="scene-panel">
+              <div class="scene-video-wrap">
+              <canvas class="scene-video-glow" width="192" height="108" aria-hidden="true"></canvas>
+              <video controls playsinline preload="none" poster="./public/assets/projects/scene-design/shrine-poster.png" aria-label="神社場景導覽影片"><source src="./public/assets/projects/scene-design/shrine-tour.mp4" type="video/mp4" />瀏覽器無法播放此影片，請使用下方連結。</video>
+              </div>
+              <a class="gallery-original" href="./public/assets/projects/scene-design/shrine-tour.mp4" target="_blank" rel="noopener">另開影片 ↗</a>
+            </div>
+          </div>
+          <p class="gallery-hint">三個視角，一段林間風景。點選圖片可放大欣賞。</p>
+        </article>
+      </section>
+      <section id="about" class="content-section" aria-labelledby="about-title">
+        <p class="eyebrow">02 / ABOUT</p>
+        <h2 id="about-title">關於我</h2>
+      </section>
+      <section id="contact" class="content-section" aria-labelledby="contact-title">
+        <p class="eyebrow">03 / CONTACT</p>
+        <h2 id="contact-title">保持聯繫</h2>
+      </section>
+    </main>
+    <dialog class="gallery-dialog" aria-labelledby="gallery-dialog-title">
+      <div class="dialog-toolbar">
+        <h2 id="gallery-dialog-title">日本色研 PCCS 排版</h2>
+        <button type="button" class="gallery-button dialog-close" aria-label="關閉放大檢視" autofocus>關閉 ×</button>
+      </div>
+      <div class="dialog-image-area"><img class="dialog-image" width="1754" height="1240" alt="" /></div>
+<p class="dialog-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <a class="gallery-original" target="_blank" rel="noopener">開啟完整尺寸圖片 ↗</a>
+    </dialog>
+    <dialog class="gallery-dialog model-dialog" aria-labelledby="model-dialog-title">
+      <div class="dialog-toolbar"><h2 id="model-dialog-title"></h2><button class="gallery-button model-close" type="button" autofocus>關閉 ×</button></div>
+      <div class="model-viewer"></div>
+      <p class="model-viewer-hint"></p>
+      <a class="gallery-original model-original" target="_blank" rel="noopener">在 Sketchfab 開啟 ↗</a>
+    </dialog>
+    <footer>© <span data-year>2026</span> <span lang="ja">ゆうの余白</span> · 建置中</footer>
+  </body>
+</html>
+
+

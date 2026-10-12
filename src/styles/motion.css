@@ -1,0 +1,84 @@
+/* 所有非必要動畫必須尊重使用者的減少動態效果設定。 */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .hero { animation: enter var(--motion-enter) ease-out both; }
+  .site-header { animation: header-arrive 1000ms cubic-bezier(0.22, 0.7, 0.3, 1) backwards; }
+  .site-header .brand,
+  .site-header nav a,
+  .site-header .theme-toggle {
+    animation: header-item-arrive 700ms cubic-bezier(0.22, 0.7, 0.3, 1) backwards;
+    transition: translate 280ms ease, color 280ms ease, border-color 280ms ease;
+  }
+  .site-header .brand { animation-delay: 160ms; }
+  .site-header nav a:nth-child(1) { animation-delay: 280ms; }
+  .site-header nav a:nth-child(2) { animation-delay: 390ms; }
+  .site-header nav a:nth-child(3) { animation-delay: 500ms; }
+  .site-header .theme-toggle { animation-delay: 610ms; }
+  .site-header nav a { position: relative; }
+  .site-header nav a:hover { text-decoration: none; }
+  .site-header nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 320ms ease;
+  }
+  .site-header nav a:focus-visible::after { transform: scaleX(1); }
+  .site-header.is-settled,
+  .site-header.is-settled .brand,
+  .site-header.is-settled nav a,
+  .site-header.is-settled .theme-toggle { animation: none; }
+  a { transition: color var(--motion-fast) ease; }
+  a:hover { color: var(--color-accent); }
+  .theme-fade body,
+  .theme-fade body * {
+    transition: background-color 650ms ease, color 650ms ease, border-color 650ms ease;
+  }
+  .theme-bloom::view-transition-group(root) { animation-duration: 1500ms; }
+  .theme-bloom::view-transition-old(root),
+  .theme-bloom::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+  }
+  .theme-bloom::view-transition-old(root) { z-index: 1; }
+  .theme-bloom::view-transition-new(root) {
+    z-index: 2;
+    mask-image: radial-gradient(circle closest-side, #000 70%, rgb(0 0 0 / 0.85) 79%, rgb(0 0 0 / 0.35) 91%, transparent 100%);
+    mask-repeat: no-repeat;
+    animation: theme-bloom 1500ms cubic-bezier(0.22, 0.7, 0.3, 1) both;
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .site-header nav a:hover,
+  .site-header .brand:hover,
+  .site-header .theme-toggle:hover { translate: 0 -3px; }
+  .site-header nav a:hover::after { transform: scaleX(1); }
+  .site-header .theme-toggle:active { translate: 0 0; }
+}
+@keyframes header-arrive {
+  from { opacity: 0; transform: translateY(-22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes header-item-arrive {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes theme-bloom {
+  from {
+    mask-size: 0px 0px;
+    mask-position: var(--bloom-x) var(--bloom-y);
+  }
+  to {
+    mask-size: var(--bloom-diameter) var(--bloom-diameter);
+    mask-position: calc(var(--bloom-x) - var(--bloom-radius)) calc(var(--bloom-y) - var(--bloom-radius));
+  }
+}
+@keyframes enter {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}

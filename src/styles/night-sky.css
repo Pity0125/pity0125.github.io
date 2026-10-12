@@ -1,0 +1,21 @@
+body { isolation: isolate; }
+.night-sky { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; opacity: 0; visibility: hidden; --sky-scroll: 0px; }
+:root[data-theme="dark"] .night-sky { opacity: 1; visibility: visible; }
+.meteor-plane { position: absolute; left: var(--x); top: var(--y); transform: translate(calc(var(--sky-scroll) * var(--depth) * -0.35), calc(var(--sky-scroll) * var(--depth) * -1)); }
+.meteor { display: block; position: relative; width: var(--length); height: 2px; opacity: 0; transform: rotate(-35deg); transform-origin: left center; background: linear-gradient(90deg, rgb(218 232 255 / 0.9), rgb(155 176 227 / 0.3) 30%, transparent); border-radius: 999px; filter: drop-shadow(0 0 5px rgb(173 194 255 / 0.45)); }
+.meteor::before { content: ''; position: absolute; left: 0; top: -1px; width: 4px; height: 4px; border-radius: 50%; background: #e1e9ff; box-shadow: 0 0 10px 2px rgb(193 212 255 / 0.35); }
+.night-sky.is-arrived .meteor { opacity: var(--brightness); }
+@media (prefers-reduced-motion: no-preference) {
+  .night-sky { transition: opacity 600ms ease; }
+  .night-sky.is-arrived .meteor { animation: meteor-arrive 800ms cubic-bezier(0.18, 0.72, 0.25, 1) backwards; animation-delay: var(--delay); }
+  @keyframes meteor-arrive {
+    from { opacity: 0; transform: translate(180px, -126px) rotate(-35deg); }
+    25% { opacity: var(--brightness); }
+    to { opacity: var(--brightness); transform: translate(0, 0) rotate(-35deg); }
+  }
+}
+@media (prefers-reduced-motion: reduce) { .meteor-plane { transform: none; } }
+@media (max-width: 600px) {
+  .meteor-plane:nth-child(n + 6) { display: none; }
+  .meteor { width: calc(var(--length) * 0.65); }
+}
